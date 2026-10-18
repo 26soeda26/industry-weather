@@ -11,6 +11,19 @@
 
 それぞれを ☀️ 晴れ ／ ☁️ 曇り ／ 🌧️ 雨 で示し、根拠となった公開情報の出典を付けます。
 
+# Industry Weather（業界の市場天気予報）
+
+業界の名前を入れるだけで、**公開情報だけ**からその業界の需要見通しを
+「天気予報」の形でまとめるツールです。
+
+| 期間 | 見る先 |
+|---|---|
+| 短期 | 半年先 |
+| 中期 | 3〜4年先 |
+| 長期 | 2030〜2040年 |
+
+それぞれを ☀️ 晴れ ／ ☁️ 曇り ／ 🌧️ 雨 で示し、根拠となった公開情報の出典を付けます。
+
 ## なぜ作ったか
 
 私は電子部品メーカーに勤めていて、本業のかたわら、公開情報だけで市場を予測する
@@ -22,11 +35,19 @@
 
 ## 使い方
 
-pip install -r requirements.txt
-export ANTHROPIC_API_KEY=（あなたのAPIキー）
-python weather.py "車載用抵抗器" --customers "自動車,産業機器"
+    pip install -r requirements.txt
+    export ANTHROPIC_API_KEY=（あなたのAPIキー）
 
-`output/` フォルダに HTML のレポートができます。
+業界名と、主なお客さんの業界を入れて実行します。
+
+    # 高齢化とともに伸びる業界
+    python weather.py "介護用品" --customers "介護施設,在宅介護"
+
+    # ドライバー不足に直面する業界
+    python weather.py "トラック物流" --customers "EC,小売"
+
+    # 海外に挑む伝統産業
+    python weather.py "日本酒"
 
 ## 仕組み
 
