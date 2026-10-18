@@ -47,7 +47,9 @@
     python weather.py "トラック物流" --customers "EC,小売"
 
     # 海外に挑む伝統産業
-    python weather.py "日本酒"
+    python weather.py "日本酒" --customers "国内飲食店,海外輸出"
+
+`output/` フォルダに HTML のレポートができます。
 
 ## 仕組み
 
